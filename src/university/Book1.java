@@ -2,14 +2,16 @@ package university;
 
 public class Book1 {
     private String name;
-    private Author[] authors;
     private double price;
-    private int qty;
+    private int qty = 0;
 
-    public Book1(String name, Author[] authors, double price, int qty) {
-        super();
+    public Book1(String name, double price) {
         this.name = name;
-        this.authors = authors;
+        this.price = price;
+    }
+
+    public Book1(String name ,double price, int qty) {
+        this.name = name;
         this.price = price;
         this.qty = qty;
     }
@@ -18,20 +20,16 @@ public class Book1 {
         return name;
     }
 
-    public Author[] getAuthors() {
-        return authors;
-    }
-
     public double getPrice() {
         return price;
     }
 
-    public int getQty() {
-        return qty;
-    }
-
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public int getQty() {
+        return qty;
     }
 
     public void setQty(int qty) {
@@ -39,6 +37,6 @@ public class Book1 {
     }
 
     public String toString() {
-        return name + " " + authors + " " + price + " " + qty;
+        return  "price: " + price + ", " + "qty: " + qty ;
     }
 }
